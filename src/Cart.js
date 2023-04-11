@@ -15,6 +15,10 @@ module.exports = class Cart {
         let total = item.price * item.quantity
         return `${item.name} x${item.quantity} - $${total}`
     })
+    onSaleItems = (items) => {
+        let onSale = items.filter(item => item.onSale)
+        return this.itemizedList(onSale)
+    }
     
 
 }
