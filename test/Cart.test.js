@@ -67,3 +67,20 @@ test("AC5",()=>{
     //Assert
     expect(result).toEqual(assert)
 })
+
+test("AC6",()=>{
+    //Arrange
+    let assert = ['Handbag x1 - $25', 'Watch x4 - $1000']
+    let cart = new Cart()
+    cart.clearList()
+    let item = new Item("Handbag",25,true,1)
+    let item2 = new Item("Watch",250,true,4)
+    let item3 = new Item("Gum",75,false,2)
+    cart.addItem(item)
+    cart.addItem(item2)
+    cart.addItem(item3)
+    //Act
+    let result = cart.onSaleItems(cart.items)
+    //Assert
+    expect(result).toEqual(assert)
+})
