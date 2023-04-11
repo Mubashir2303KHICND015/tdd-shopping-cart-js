@@ -52,3 +52,18 @@ test("AC4",()=>{
     //Assert
     expect(result).toEqual(assert)
 })
+
+test("AC5",()=>{
+    //Arrange
+    let assert = 1025
+    let cart = new Cart()
+    cart.clearList()
+    let item = new Item("Handbag",25,false,1)
+    let item2 = new Item("Watch",250,false,4)
+    cart.addItem(item)
+    cart.addItem(item2)
+    //Act
+    let result = cart.totalPrice
+    //Assert
+    expect(result).toEqual(assert)
+})
