@@ -25,15 +25,15 @@ test("AC2",()=>{
 
 test("AC3",()=>{
     //Arrange
-    let assert = ['Handbag - x2', 'Watch - x4']
+    let assert = ["Handbag - x1", "Watch - x4"]
     let cart = new Cart()
     cart.clearList()
-    let item = new Item("HandBag",25,false,1)
+    let item = new Item("Handbag",25,false,1)
     let item2 = new Item("Watch",250,false,4)
     cart.addItem(item)
     cart.addItem(item2)
     //Act
-    let result = cart.itemQuantities()
+    let result = cart.itemQuantities(cart.items)
     //Assert
-    expect(result).Equal(assert)
+    expect(result).toEqual(assert)
 })

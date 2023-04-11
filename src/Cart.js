@@ -10,6 +10,7 @@ module.exports = class Cart {
         this.totalPrice += total
         this.items.push(item)
     }
+    itemQuantities = (items) => items.map(item => `${item.name} - x${item.quantity}`)
     
 
 }
