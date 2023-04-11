@@ -11,6 +11,10 @@ module.exports = class Cart {
         this.items.push(item)
     }
     itemQuantities = (items) => items.map(item => `${item.name} - x${item.quantity}`)
+    itemizedList = (items) => items.map(item=>{
+        let total = item.price * item.quantity
+        return `${item.name} x${item.quantity} - $${total}`
+    })
     
 
 }
